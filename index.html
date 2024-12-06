@@ -5,25 +5,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="./assets/css/styleindex.css">
     <title>Vaibhav's Portfolio</title>
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="left">Vaibhav's Portfolio</div>
             <div class="right">
                 <ul>
                     <li><a href="" class="active">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="./blog.html">My Blog</a></li>
                     <li><a href="">Projects</a></li>
-                    <li><a href="">Contact Me</a></li>
+                    <li><a href="./contact.html">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <main>
     <main>
         <section class="firstsection">
             <div class="leftsection">
@@ -36,30 +37,34 @@
                 </div>
             </div>
             <div class="rightsection">
-                <img src="Image.png" alt="Logo" />
+                <img src="/assets/images/Image.png" alt="Logo" />
             </div>
         </section>
         <hr>
     </main>
 
-    <h2 class="textcenter">My Expertise</h2>
+    <h2 class="textcenter" id="about">My Expertise</h2>
     <section class="secondsection">
         <div class="mainbox1">
             <div class="thumbnail">
-                <img src="HTMLlogo.png" alt="HTMLlogo">
+                <img src="/assets/images/HTMLlogo.png" alt="HTMLlogo">
             </div>
             <div class="columntext">
                 <h3>HTML Developer (2021 - 2023)</h3>
-                <p> I have extensive experience in HTML, a markup language for creating web pages. I am proficient in using HTML tags to structure content, create forms, embed media, and build responsive and accessible websites.</p>
+                <p> I have extensive experience in HTML, a markup language for creating web pages. I am proficient in
+                    using HTML tags to structure content, create forms, embed media, and build responsive and accessible
+                    websites.</p>
             </div>
         </div>
         <div class="mainbox2">
             <div class="thumbnail">
-                <img src="CSSlogo.png" alt="CSSlogo">
+                <img src="/assets/images/CSSlogo.png" alt="CSSlogo">
             </div>
             <div class="columntext">
                 <h3>CSS Developer (2021 - 2023)</h3>
-                <p>I have a strong command of CSS with experience in designing and styling web pages. I am skilled in applying CSS properties, selectors, and media queries to achieve layout, typography, color, and visual enhancements on websites.</p>
+                <p>I have a strong command of CSS with experience in designing and styling web pages. I am skilled in
+                    applying CSS properties, selectors, and media queries to achieve layout, typography, color, and
+                    visual enhancements on websites.</p>
             </div>
         </div>
         </div>
@@ -68,37 +73,29 @@
     <section class="secondsection">
         <div class="mainbox1">
             <div class="thumbnail">
-                <img src="JSlogo.png" alt="JSlogo">
+                <img src="/assets/images/JSlogo.png" alt="JSlogo">
             </div>
             <div class="columntext">
                 <h3>JavaScript Developer (2021 - 2023)</h3>
-                <p>I have significant experience in JavaScript, a versatile programming language used for web development. I am proficient in writing JavaScript code to enhance interactivity, manipulate HTML elements, handle events and create dynamic and responsive web applications</p>
+                <p>I have significant experience in JavaScript, a versatile programming language used for web
+                    development. I am proficient in writing JavaScript code to enhance interactivity, manipulate HTML
+                    elements, handle events and create dynamic and responsive web applications</p>
             </div>
         </div>
         <div class="mainbox2">
             <div class="thumbnail">
-                <img src="REACTJSlogo.png" alt="REACTJSlogo">
+                <img src="/assets/images/REACTJSlogo.png" alt="REACTJSlogo">
             </div>
             <div class="columntext">
                 <h3>React JS Developer (2021 - 2023)</h3>
-                <p>I have considerable experience with React.js, a popular JavaScript library for building user interfaces. I am skilled in creating reusable components, managing state and props, handling lifecycle events, and utilizing React's virtual DOM for efficient rendering, resulting in interactive and responsive web applications</p>
+                <p>I have considerable experience with React.js, a popular JavaScript library for building user
+                    interfaces. I am skilled in creating reusable components, managing state and props, handling
+                    lifecycle events, and utilizing React's virtual DOM for efficient rendering, resulting in
+                    interactive and responsive web applications</p>
             </div>
         </div>
         </div>
     </section>
-
-    <section class="thirdsection">
-        <hr>
-        <div class="mainbox3">
-            <div class="coderpic">
-                <img src="Imagecoder.png" alt="coderpic">
-            </div>
-            <div class="codertext">
-                <h2></h2>
-            </div>
-        </div>
-    </section>
-
 
 
     <footer class="footer">
@@ -112,6 +109,7 @@
             typeSpeed: 50,
         });
     </script>
+    <script src="./assets/js/navbar.js"></script>
 
 </body>
 
