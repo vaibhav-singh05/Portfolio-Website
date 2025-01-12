@@ -12,10 +12,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* Default styles for the navbar */
 .navbar {
-    position: fixed;
-    top: -80px; /* Initially hidden */
     left: 0;
     right: 0;
     height: 80px;
@@ -23,15 +20,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    transition: top 0.5s ease-in-out; /* Smooth sliding effect */
-    z-index: 1000;
 }
-
-/* Visible navbar when scrolled */
-.navbar.visible {
-    top: 0;
-}
-
 
 
 nav ul {
