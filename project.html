@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav's Portfolio - Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(15 23 41);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            left: 0;
+            right: 0;
+            height: 80px;
+            background-color: rgb(10, 18, 36);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: rgb(125, 125, 235);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .project-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .project-card a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">Vaibhav's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href=".#about">About</a></li>
+                    <li><a href="./project.html" class="active">Projects</a></li>
+                    <li><a href="./contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <div class="project-card">
+            <h2>Educa Web</h2>
+            <p>A dynamic learning platform with interactive course listings.</p>
+            <a href="https://vaibhav-singh05.github.io/Educa-Web/" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h2>UniBook</h2>
+            <p>A social platform for university students.</p>
+            <a href="https://unibook.onrender.com/" target="_blank">View Project</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <p class="textfooter">Copyright &copy; 2023 Vaibahv's Portfolio - All rights reserved</p>
+  </footer>
+</body>
+</html>
