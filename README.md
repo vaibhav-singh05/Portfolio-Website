@@ -41,8 +41,11 @@ Portfolio-Website/
 │── README.md
 ```
 
-## 🌟 Connect with Me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/vaibhav-singh-2a5991229/)
+---
+## 📞 Support
+- **Author:** Vaibhav Singh  
+- **Email:** vaibhavsingh273010@gmail.com  
+- **LinkedIn:** [Click Here](https://www.linkedin.com/in/vaibhav-singh-2a5991229/)  
 
 ---
-💙 If you like this project, give it a ⭐ on GitHub!
+### 🎉 **Happy Coding! 🚀**
