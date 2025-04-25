@@ -16,10 +16,16 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+        }
+
         body {
             background-color: rgb(15 23 41);
             color: white;
             font-family: "Poppins", sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
         .navbar {
@@ -57,6 +63,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             padding: 20px;
+            flex: 1;
         }
 
         .project-card {
@@ -96,9 +103,7 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
             width: 100%;
-            bottom: 0;
         }
     </style>
 </head>
@@ -120,20 +125,38 @@
 
     <section class="projects">
         <div class="project-card">
-            <h2>Educa Web</h2>
-            <p>A dynamic learning platform with interactive course listings.</p>
-            <a href="https://vaibhav-singh05.github.io/Educa-Web/" target="_blank">View Project</a>
+            <h2>UniBook</h2>
+            <p>Developed UniBook, a Django GUI app for secure university book trading with search and user auth.</p>
+            <a href="https://unibook-krly.onrender.com" target="_blank">View Project</a>
         </div>
 
         <div class="project-card">
-            <h2>UniBook</h2>
-            <p>A social platform for university students.</p>
-            <a href="https://unibook-krly.onrender.com" target="_blank">View Project</a>
+            <h2>Vani</h2>
+            <p>A Django-based e-commerce platform for seamless online shopping with secure authentication, product search, and cart functionality.</p>
+            <a href="https://vani-6hcu.onrender.com" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h2>Task Manager</h2>
+            <p>The Task Manager is a Django web app for creating, assigning, tracking, and deleting tasks—perfect for personal use or team collaboration.</p>
+            <a href="https://task-manager-a4jc.onrender.com" target="_blank">View Project</a>
+        </div> 
+
+        <div class="project-card">
+            <h2>Quora</h2>
+            <p>A Django-based Quora clone where users can post, search, and explore questions via a clean Bootstrap interface.</p>
+            <a href="https://quora-phjc.onrender.com" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h2>Educa Web</h2>
+            <p>A modern e-learning platform featuring interactive, responsive design, and a user-friendly interface to enhance digital learning experiences.</p>
+            <a href="https://vaibhav-singh05.github.io/Educa-Web/" target="_blank">View Project</a>
         </div>
     </section>
 
     <footer class="footer">
-      <p class="textfooter">Copyright &copy; 2023 Vaibahv's Portfolio - All rights reserved</p>
-  </footer>
+        <p class="textfooter">Copyright &copy; 2023 Vaibahv's Portfolio - All rights reserved</p>
+    </footer>
 </body>
 </html>
