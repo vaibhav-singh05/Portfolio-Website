@@ -4,118 +4,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Vaibhav Singh's portfolio projects including Django web applications, e-commerce platforms, and modern web solutions." />
+    <meta name="keywords" content="Portfolio Projects, Django Projects, Web Applications, E-commerce, Task Manager, Quora Clone" />
+    <meta name="author" content="Vaibhav Singh" />
     <title>Vaibhav's Portfolio - Projects</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+        
+        .projects {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
 
-        * {
-            margin: 0;
+        .projects-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .projects-title {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .projects-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
             height: 100%;
-        }
-
-        body {
-            background-color: rgb(15 23 41);
-            color: white;
-            font-family: "Poppins", sans-serif;
             display: flex;
             flex-direction: column;
         }
 
-        .navbar {
+        .project-image {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .project-card:hover .project-image::before {
+            left: 100%;
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
             left: 0;
             right: 0;
-            height: 80px;
-            background-color: rgb(10, 18, 36);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
         }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
+        .project-card:hover::before {
+            transform: scaleX(1);
         }
 
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: rgb(125, 125, 235);
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            flex: 1;
-        }
-
-        .project-card {
-            background-color: #333;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
         }
 
         .project-card h2 {
             font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .project-card p {
-            font-size: 1rem;
-            margin-bottom: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
-        .project-card a {
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .project-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .project-link {
             text-decoration: none;
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            flex: 1;
         }
 
-        .project-card a:hover {
-            background-color: #45a049;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
+        .project-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
             width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .project-link:hover::before {
+            left: 100%;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+        }
+
+        .project-link:active {
+            transform: translateY(0);
+        }
+
+        .link-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover .link-icon {
+            transform: scale(1.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .projects-title {
+                font-size: 2.5rem;
+            }
+            
+            .projects-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+            
+            .project-link {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projects {
+                padding: 2rem 1rem;
+            }
+            
+            .projects-title {
+                font-size: 2rem;
+            }
+            
+            .project-content {
+                padding: 1.5rem;
+            }
+            
+            .project-icon {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
+        <div class="scroll-progress"></div>
         <nav class="navbar">
             <div class="left">Vaibhav's Portfolio</div>
             <div class="right">
+                <button class="theme-toggle" id="themeToggle">
+                    <span>🌙</span> Dark Mode
+                </button>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href=".#about">About</a></li>
+                    <li><a href="./index.html#about">About</a></li>
                     <li><a href="./project.html" class="active">Projects</a></li>
                     <li><a href="./contact.html">Contact Me</a></li>
                 </ul>
@@ -124,39 +293,207 @@
     </header>
 
     <section class="projects">
-        <div class="project-card">
-            <h2>UniBook</h2>
-            <p>Developed UniBook, a Django GUI app for secure university book trading with search and user auth.</p>
-            <a href="https://unibook-krly.onrender.com" target="_blank">View Project</a>
+        <div class="projects-header">
+            <h2 class="projects-title">My Projects</h2>
+            <p class="projects-subtitle">Here are some of my recent projects that showcase my skills and experience</p>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-icon">📚</div>
+                </div>
+                <div class="project-content">
+                    <h3>UniBook</h3>
+                    <p>Developed UniBook, a comprehensive Django web application for secure university book trading. Features include advanced search functionality, user authentication, book listings, and a clean, responsive interface for students to buy and sell textbooks.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://unibook-krly.onrender.com" target="_blank" class="project-link">
+                            <span class="link-icon">🌐</span>
+                            <span class="link-text">Live Demo</span>
+                        </a>
+                        <a href="https://github.com/vaibhav-singh05/UniBook" target="_blank" class="project-link">
+                            <span class="link-icon">🔗</span>
+                            <span class="link-text">View Code</span>
+                        </a>
+                    </div>
+                </div>
         </div>
 
         <div class="project-card">
-            <h2>Vani</h2>
-            <p>A Django-based e-commerce platform for seamless online shopping with secure authentication, product search, and cart functionality.</p>
-            <a href="https://vani-6hcu.onrender.com" target="_blank">View Project</a>
+                <div class="project-image">
+                    <div class="project-icon">🛒</div>
+                </div>
+                <div class="project-content">
+                    <h3>Vani E-commerce</h3>
+                    <p>A full-featured Django e-commerce platform with secure user authentication, product catalog, shopping cart functionality, order management, and payment integration. Built with modern web development practices and responsive design.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">Stripe API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://vani-6hcu.onrender.com" target="_blank" class="project-link">
+                            <span class="link-icon">🌐</span>
+                            <span class="link-text">Live Demo</span>
+                        </a>
+                        <a href="https://github.com/vaibhav-singh05/Vani" target="_blank" class="project-link">
+                            <span class="link-icon">🔗</span>
+                            <span class="link-text">View Code</span>
+                        </a>
+                    </div>
+                </div>
         </div>
 
         <div class="project-card">
-            <h2>Task Manager</h2>
-            <p>The Task Manager is a Django web app for creating, assigning, tracking, and deleting tasks—perfect for personal use or team collaboration.</p>
-            <a href="https://task-manager-a4jc.onrender.com" target="_blank">View Project</a>
+                <div class="project-image">
+                    <div class="project-icon">📋</div>
+                </div>
+                <div class="project-content">
+                    <h3>Task Manager Pro</h3>
+                    <p>An intuitive Django web application for task management and team collaboration. Features include task creation, assignment, progress tracking, deadline management, and team communication tools for enhanced productivity.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">AJAX</span>
+                        <span class="tech-tag">jQuery</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://task-manager-a4jc.onrender.com" target="_blank" class="project-link">
+                            <span class="link-icon">🌐</span>
+                            <span class="link-text">Live Demo</span>
+                        </a>
+                        <a href="https://github.com/vaibhav-singh05/Task-Manager" target="_blank" class="project-link">
+                            <span class="link-icon">🔗</span>
+                            <span class="link-text">View Code</span>
+                        </a>
+                    </div>
+                </div>
         </div> 
 
-        <div class="project-card">
-            <h2>Quora</h2>
-            <p>A Django-based Quora clone where users can post, search, and explore questions via a clean Bootstrap interface.</p>
-            <a href="https://quora-phjc.onrender.com" target="_blank">View Project</a>
-        </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-icon">❓</div>
+                </div>
+                <div class="project-content">
+                    <h3>Quora Clone</h3>
+                    <p>A feature-rich Django-based Q&A platform inspired by Quora. Users can post questions, provide answers, vote on content, search through discussions, and engage in meaningful conversations with a clean, Bootstrap-powered interface.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">Django REST</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://quora-phjc.onrender.com" target="_blank" class="project-link">
+                            <span class="link-icon">🌐</span>
+                            <span class="link-text">Live Demo</span>
+                        </a>
+                        <a href="https://github.com/vaibhav-singh05/Quora" target="_blank" class="project-link">
+                            <span class="link-icon">🔗</span>
+                            <span class="link-text">View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        <div class="project-card">
-            <h2>Educa Web</h2>
-            <p>A modern e-learning platform featuring interactive, responsive design, and a user-friendly interface to enhance digital learning experiences.</p>
-            <a href="https://vaibhav-singh05.github.io/Educa-Web/" target="_blank">View Project</a>
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-icon">🎓</div>
+                </div>
+                <div class="project-content">
+                    <h3>Educa Web Platform</h3>
+                    <p>A modern, responsive e-learning platform built with vanilla web technologies. Features interactive course modules, progress tracking, user authentication, and a mobile-first design approach for optimal learning experiences across all devices.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                        <span class="tech-tag">Local Storage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://vaibhav-singh05.github.io/Educa-Web/" target="_blank" class="project-link">
+                            <span class="link-icon">🌐</span>
+                            <span class="link-text">Live Demo</span>
+                        </a>
+                        <a href="https://github.com/vaibhav-singh05/Educa-Web" target="_blank" class="project-link">
+                            <span class="link-icon">🔗</span>
+                            <span class="link-text">View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p class="textfooter">Copyright &copy; 2023 Vaibahv's Portfolio - All rights reserved</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Vaibhav Singh</h3>
+                <p class="footer-description">Full Stack Developer passionate about creating amazing web experiences</p>
+                <div class="social-links">
+                    <a href="mailto:vaibhavsingh273010@gmail.com" class="social-link" title="Email">
+                        <span class="social-icon">📧</span>
+                    </a>
+                    <a href="https://linkedin.com/in/vaibhav-singh" class="social-link" title="LinkedIn">
+                        <span class="social-icon">💼</span>
+                    </a>
+                    <a href="https://github.com/vaibhav-singh" class="social-link" title="GitHub">
+                        <span class="social-icon">🐙</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/16hyTDBEUmi1VTxLqOFqsj6gQTVTFxdoM/view?usp=drive_link" class="social-link" title="Resume">
+                        <span class="social-icon">📄</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./project.html">Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Skills</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Vaibhav Singh. All rights reserved.</p>
+                <p class="footer-message">Made with ❤️ and lots of ☕</p>
+            </div>
+        </div>
     </footer>
+    
+    <!-- Particles Container -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

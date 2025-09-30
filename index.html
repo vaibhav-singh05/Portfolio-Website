@@ -5,17 +5,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vaibhav Singh - Full Stack Developer specializing in Python, Django, and modern web technologies. View my portfolio, projects, and get in touch." />
+    <meta name="keywords" content="Full Stack Developer, Python Developer, Django, Web Developer, Portfolio, Vaibhav Singh" />
+    <meta name="author" content="Vaibhav Singh" />
+    <meta property="og:title" content="Vaibhav's Portfolio - Full Stack Developer" />
+    <meta property="og:description" content="Full Stack Developer specializing in Python, Django, and modern web technologies." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="style.css">
-    <title>Vaibhav's Portfolio</title>
+    <title>Vaibhav's Portfolio - Full Stack Developer</title>
 </head>
 
 <body>
     <header>
+        <div class="scroll-progress"></div>
         <nav class="navbar">
             <div class="left">Vaibhav's Portfolio</div>
             <div class="right">
+                <button class="theme-toggle" id="themeToggle">
+                    <span>🌙</span> Dark Mode
+                </button>
                 <ul>
-                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="./project.html">Projects</a></li>
                     <li><a href="./contact.html">Contact Me</a></li>
@@ -24,10 +35,10 @@
         </nav>
     </header>
     <main>
-        <section class="firstsection">
+        <section id="home" class="firstsection">
             <div class="leftsection">
-                Hi, My Name is <span class="textpurple">Vaibhav</span>
-                <div>And I am a passionate</div>
+                <h1>Hi, My Name is <span class="textpurple rainbow-text">Vaibhav</span></h1>
+                <div class="subtitle">And I am a passionate</div>
                 <span id="element"></span>
                 <div class="buttons">
                     <a href="https://drive.google.com/file/d/16hyTDBEUmi1VTxLqOFqsj6gQTVTFxdoM/view?usp=drive_link"class="btn">Download Resume</a>
@@ -43,7 +54,7 @@
 
     <h2 class="textcenter" id="about">My Expertise</h2>
     <section class="secondsection">
-        <div class="mainbox1">
+        <div class="mainbox1 glow-border">
             <div class="thumbnail">
                 <img src="./images/HTMLlogo.png" alt="HTMLlogo">
             </div>
@@ -53,7 +64,7 @@
                     using HTML tags to structure content, create forms, embed media, and build responsive and accessible websites.</p>
             </div>
         </div>
-        <div class="mainbox2">
+        <div class="mainbox2 glow-border">
             <div class="thumbnail">
                 <img src="./images/CSSlogo.png" alt="CSSlogo">
             </div>
@@ -68,7 +79,7 @@
     </section>
 
     <section class="secondsection">
-        <div class="mainbox1">
+        <div class="mainbox1 glow-border">
             <div class="thumbnail">
                 <img src="./images/JSlogo.png" alt="JSlogo">
             </div>
@@ -79,7 +90,7 @@
                     elements, handle events and create dynamic and responsive web applications.</p>
             </div>
         </div>
-        <div class="mainbox2">
+        <div class="mainbox2 glow-border">
             <div class="thumbnail">
                 <img src="./images/PYTHONlogo.png" alt="REACTJSlogo">
             </div>
@@ -91,7 +102,7 @@
         </div>
     </section>
     <section class="secondsection">
-        <div class="mainbox1">
+        <div class="mainbox1 glow-border">
             <div class="thumbnail">
                 <img src="./images/DJANGOlogo.png" alt="JSlogo">
             </div>
@@ -100,12 +111,12 @@
                 <p>Experienced in Django for building robust web applications, implementing RESTful APIs, managing databases with ORM, and ensuring secure user authentication, with a strong focus on scalable and maintainable code.</p>
             </div>
         </div>
-        <div class="mainbox2">
+        <div class="mainbox2 glow-border">
             <div class="thumbnail">
                 <img src="./images/POSTGRElogo.png" alt="REACTJSlogo">
             </div>
             <div class="columntext">
-                <h3>Postgre SQl (2024 - 2025)</h3>
+                <h3>PostgreSQL (2024 - 2025)</h3>
                 <p>Proficient in PostgreSQL for designing and managing relational databases, writing complex SQL queries, optimizing performance, and ensuring data integrity, with hands-on experience in advanced indexing and query optimization techniques.</p>
             </div>
         </div>
@@ -114,16 +125,65 @@
 
 
     <footer class="footer">
-        <p class="textfooter">Copyright &copy; 2023 Vaibahv's Portfolio - All rights reserved</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Vaibhav Singh</h3>
+                <p class="footer-description">Full Stack Developer passionate about creating amazing web experiences</p>
+                <div class="social-links">
+                    <a href="mailto:vaibhavsingh273010@gmail.com" class="social-link" title="Email">
+                        <span class="social-icon">📧</span>
+                    </a>
+                    <a href="https://linkedin.com/in/vaibhav-singh" class="social-link" title="LinkedIn">
+                        <span class="social-icon">💼</span>
+                    </a>
+                    <a href="https://github.com/vaibhav-singh" class="social-link" title="GitHub">
+                        <span class="social-icon">🐙</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/16hyTDBEUmi1VTxLqOFqsj6gQTVTFxdoM/view?usp=drive_link" class="social-link" title="Resume">
+                        <span class="social-icon">📄</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="./project.html">Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Skills</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Vaibhav Singh. All rights reserved.</p>
+                <p class="footer-message">Made with ❤️ and lots of ☕</p>
+            </div>
+        </div>
     </footer>
+    
+    <!-- Particles Container -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
-    <script>
-        var typed = new Typed("#element", {
-            strings: ["Full Stack Developer", "Python Developer","Programmer"],
-            typeSpeed: 50,
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
