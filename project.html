@@ -4,23 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Vaibhav Singh's portfolio projects including Django web applications, e-commerce platforms, and modern web solutions." />
-    <meta name="keywords" content="Portfolio Projects, Django Projects, Web Applications, E-commerce, Task Manager, Quora Clone" />
+    <meta name="description" content="Vaibhav Singh's projects - Medical Counselling Center, Unibook, and more. Full-stack Django applications with payment integration and cloud deployment." />
+    <meta name="keywords" content="Django Projects, Backend Projects, Medical Counselling, Unibook, Vaibhav Singh" />
     <meta name="author" content="Vaibhav Singh" />
-    <title>Vaibhav's Portfolio - Projects</title>
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#050508" />
+    <title>Projects | Vaibhav Singh</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
         .projects {
-            padding: 4rem 0;
-            min-height: calc(100vh - 80px);
-            margin-top: 80px;
+            padding: 7rem 2rem 5rem;
+            min-height: 100vh;
         }
 
-        .container {
+        .projects .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
         }
 
         .projects-header {
@@ -29,44 +28,49 @@
         }
 
         .projects-title {
-            font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, var(--text), var(--cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 1rem;
         }
 
         .projects-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 600px;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 560px;
             margin: 0 auto;
+            line-height: 1.6;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem;
         }
 
         .project-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
-            padding: 0;
-            transition: all 0.3s ease;
-            position: relative;
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
             overflow: hidden;
-            height: 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
         }
 
+        .project-card:hover {
+            border-color: rgba(0, 212, 255, 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.15), 0 0 0 1px rgba(0, 212, 255, 0.1);
+        }
+
         .project-image {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 2rem;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(168, 85, 247, 0.15));
+            padding: 2.5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -75,23 +79,19 @@
         .project-image::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
         }
 
         .project-card:hover .project-image::before {
-            left: 100%;
+            transform: translateX(100%);
         }
 
         .project-icon {
-            font-size: 3rem;
-            color: white;
-            position: relative;
-            z-index: 2;
+            font-size: 3.5rem;
+            filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.3));
         }
 
         .project-content {
@@ -101,75 +101,23 @@
             flex-direction: column;
         }
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary-color);
-        }
-
-        .project-card h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        .project-content h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, var(--text), var(--cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .project-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-tag {
-            background: rgba(99, 102, 241, 0.1);
-            color: var(--primary-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.8rem;
-            font-weight: 500;
-            border: 1px solid rgba(99, 102, 241, 0.2);
-        }
-
-        .project-content h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-
         .project-content p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
             flex: 1;
+            font-size: 0.95rem;
         }
 
         .tech-stack {
@@ -177,223 +125,57 @@
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1.5rem;
-        }
-
-        .tech-tag {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .tech-tag:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
         }
 
         .project-links {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
             margin-top: auto;
         }
 
         .project-link {
+            flex: 1;
+            padding: 0.85rem 1.25rem;
+            background: linear-gradient(135deg, var(--cyan), var(--blue));
+            color: #0a0a0a;
             text-decoration: none;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
+            border-radius: 12px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            flex: 1;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
         }
 
-        .project-link::before {
+        .project-link::after {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
         }
 
-        .project-link:hover::before {
+        .project-link:hover::after {
             left: 100%;
         }
 
         .project-link:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-        }
-
-        .project-link:active {
-            transform: translateY(0);
-        }
-
-        .link-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .project-link:hover .link-icon {
-            transform: scale(1.2);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary-color);
-        }
-
-        @media (max-width: 1024px) {
-            .projects-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 1.5rem;
-            }
-            
-            .projects-title {
-                font-size: 2.8rem;
-            }
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.45);
         }
 
         @media (max-width: 768px) {
-            .projects {
-                padding: 4rem 0;
-                margin-top: 160px;
-            }
-            
-            .container {
-                padding: 1rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .projects-title {
-                font-size: 2.5rem;
-                line-height: 1.2;
-                margin-bottom: 1.5rem;
-            }
-            
-            .projects-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .project-links {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-            
-            .project-link {
-                width: 100%;
-                padding: 0.8rem 1.2rem;
-            }
-            
-            .project-content {
-                padding: 1.5rem;
-            }
-            
-            .project-image {
-                padding: 1.5rem;
-            }
-            
-            .project-icon {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .projects {
-                padding: 4rem 0;
-                margin-top: 170px;
-            }
-            
-            .container {
-                padding: 0.5rem;
-            }
-            
-            .projects-title {
-                font-size: 2rem;
-                line-height: 1.2;
-                margin-bottom: 1.5rem;
-            }
-            
-            .projects-subtitle {
-                font-size: 1rem;
-            }
-            
-            .project-content {
-                padding: 1rem;
-            }
-            
-            .project-image {
-                padding: 1rem;
-            }
-            
-            .project-icon {
-                font-size: 2rem;
-            }
-            
-            .project-content h3 {
-                font-size: 1.3rem;
-            }
-            
-            .project-content p {
-                font-size: 0.9rem;
-            }
-            
-            .tech-tag {
-                font-size: 0.8rem;
-                padding: 0.4rem 0.8rem;
-            }
-            
-            .project-link {
-                padding: 0.7rem 1rem;
-                font-size: 0.85rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .projects {
-                padding: 4rem 0;
-                margin-top: 170px;
-            }
-            
-            .container {
-                padding: 0.5rem;
-            }
-            
-            .projects-title {
-                font-size: 1.8rem;
-                line-height: 1.2;
-                margin-bottom: 1.5rem;
-            }
-            
-            .project-content {
-                padding: 0.8rem;
-            }
-            
-            .project-image {
-                padding: 0.8rem;
-            }
-            
-            .project-icon {
-                font-size: 1.8rem;
-            }
+            .projects { padding: 5rem 1rem 3rem; }
+            .projects-title { font-size: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -402,16 +184,14 @@
     <header>
         <div class="scroll-progress"></div>
         <nav class="navbar">
-            <div class="left">Vaibhav's Portfolio</div>
-            <div class="right">
-                <button class="theme-toggle" id="themeToggle">
-                    <span>🌙</span> Dark Mode
-                </button>
-                <ul>
+            <a href="./index.html" class="nav-brand">VS</a>
+            <div class="nav-right">
+                <ul class="nav-links">
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./index.html#experience">Experience</a></li>
+                    <li><a href="./index.html#expertise">Expertise</a></li>
                     <li><a href="./project.html" class="active">Projects</a></li>
-                    <li><a href="./contact.html">Contact Me</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -420,207 +200,180 @@
     <section class="projects">
         <div class="container">
             <div class="projects-header">
-                <h2 class="projects-title">My Projects</h2>
-                <p class="projects-subtitle">Here are some of my recent projects that showcase my skills and experience</p>
+                <h2 class="projects-title">Projects</h2>
+                <p class="projects-subtitle">Full-stack applications built with Django, PostgreSQL, and modern deployment practices</p>
             </div>
-            
+
             <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-icon">📚</div>
-                </div>
-                <div class="project-content">
-                    <h3>UniBook</h3>
-                    <p>Developed UniBook, a comprehensive Django web application for secure university book trading. Features include advanced search functionality, user authentication, book listings, and a clean, responsive interface for students to buy and sell textbooks.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">🏥</div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://unibook-krly.onrender.com" target="_blank" class="project-link">
-                            <span class="link-icon">🌐</span>
-                            <span class="link-text">Live Demo</span>
-                        </a>
-                        <a href="https://github.com/vaibhav-singh05/UniBook" target="_blank" class="project-link">
-                            <span class="link-icon">🔗</span>
-                            <span class="link-text">View Code</span>
-                        </a>
+                    <div class="project-content">
+                        <h3>Medical Counselling Center</h3>
+                        <p>Full-stack counselling platform for fee collection, order tracking, and mentorship applications. OTP-based email authentication with rate limiting. Razorpay integration with webhook verification for automated order processing. Coupon system and admin dashboard. Deployed on Hostinger VPS with Nginx, Gunicorn, SSL (Certbot). SEO via sitemap and Google Search Console.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Razorpay</span>
+                            <span class="tech-tag">Gunicorn</span>
+                            <span class="tech-tag">Nginx</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://medicalcounsellingcenter.com/" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
+                            <a href="https://github.com/vaibhav-singh05" target="_blank" rel="noopener" class="project-link">View Code →</a>
+                        </div>
                     </div>
-                </div>
-        </div>
+                </article>
 
-        <div class="project-card">
-                <div class="project-image">
-                    <div class="project-icon">🛒</div>
-                </div>
-                <div class="project-content">
-                    <h3>Vani E-commerce</h3>
-                    <p>A full-featured Django e-commerce platform with secure user authentication, product catalog, shopping cart functionality, order management, and payment integration. Built with modern web development practices and responsive design.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">Stripe API</span>
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">📚</div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://vani-6hcu.onrender.com" target="_blank" class="project-link">
-                            <span class="link-icon">🌐</span>
-                            <span class="link-text">Live Demo</span>
-                        </a>
-                        <a href="https://github.com/vaibhav-singh05/Vani" target="_blank" class="project-link">
-                            <span class="link-icon">🔗</span>
-                            <span class="link-text">View Code</span>
-                        </a>
+                    <div class="project-content">
+                        <h3>Unibook</h3>
+                        <p>GUI-based platform for student book exchange using Django and Bootstrap. Search and filtering by subject, author, and price. Secure authentication and profile management workflows. Built for seamless textbook trading between university students.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Authentication</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://unibook-krly.onrender.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
+                            <a href="https://github.com/vaibhav-singh05/UniBook" target="_blank" rel="noopener" class="project-link">View Code →</a>
+                        </div>
                     </div>
-                </div>
-        </div>
+                </article>
 
-        <div class="project-card">
-                <div class="project-image">
-                    <div class="project-icon">📋</div>
-                </div>
-                <div class="project-content">
-                    <h3>Task Manager Pro</h3>
-                    <p>An intuitive Django web application for task management and team collaboration. Features include task creation, assignment, progress tracking, deadline management, and team communication tools for enhanced productivity.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">AJAX</span>
-                        <span class="tech-tag">jQuery</span>
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">🛒</div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://task-manager-a4jc.onrender.com" target="_blank" class="project-link">
-                            <span class="link-icon">🌐</span>
-                            <span class="link-text">Live Demo</span>
-                        </a>
-                        <a href="https://github.com/vaibhav-singh05/Task-Manager" target="_blank" class="project-link">
-                            <span class="link-icon">🔗</span>
-                            <span class="link-text">View Code</span>
-                        </a>
+                    <div class="project-content">
+                        <h3>Vani E-commerce</h3>
+                        <p>Full-featured Django e-commerce platform with secure user authentication, product catalog, shopping cart, order management, and payment integration. Built with modern web development practices and responsive design.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Stripe API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://vani-6hcu.onrender.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
+                            <a href="https://github.com/vaibhav-singh05/Vani" target="_blank" rel="noopener" class="project-link">View Code →</a>
+                        </div>
                     </div>
-                </div>
-        </div> 
+                </article>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-icon">❓</div>
-                </div>
-                <div class="project-content">
-                    <h3>Quora Clone</h3>
-                    <p>A feature-rich Django-based Q&A platform inspired by Quora. Users can post questions, provide answers, vote on content, search through discussions, and engage in meaningful conversations with a clean, Bootstrap-powered interface.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">Django REST</span>
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">📋</div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://quora-phjc.onrender.com" target="_blank" class="project-link">
-                            <span class="link-icon">🌐</span>
-                            <span class="link-text">Live Demo</span>
-                        </a>
-                        <a href="https://github.com/vaibhav-singh05/Quora" target="_blank" class="project-link">
-                            <span class="link-icon">🔗</span>
-                            <span class="link-text">View Code</span>
-                        </a>
+                    <div class="project-content">
+                        <h3>Task Manager Pro</h3>
+                        <p>Intuitive Django web application for task management and team collaboration. Features task creation, assignment, progress tracking, deadline management, and team communication tools for enhanced productivity.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">AJAX</span>
+                            <span class="tech-tag">jQuery</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://task-manager-a4jc.onrender.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
+                            <a href="https://github.com/vaibhav-singh05/Task-Manager" target="_blank" rel="noopener" class="project-link">View Code →</a>
+                        </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">❓</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Quora Clone</h3>
+                        <p>Feature-rich Django-based Q&A platform inspired by Quora. Users can post questions, provide answers, vote on content, search through discussions, and engage in meaningful conversations with a clean, Bootstrap-powered interface.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Django REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://quora-phjc.onrender.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
+                            <a href="https://github.com/vaibhav-singh05/Quora" target="_blank" rel="noopener" class="project-link">View Code →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">🎓</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Educa Web Platform</h3>
+                        <p>Modern, responsive e-learning platform built with vanilla web technologies. Features interactive course modules, progress tracking, user authentication, and mobile-first design for optimal learning experiences across all devices.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">Local Storage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://vaibhav-singh05.github.io/Educa-Web/" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
+                            <a href="https://github.com/vaibhav-singh05/Educa-Web" target="_blank" rel="noopener" class="project-link">View Code →</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-icon">🎓</div>
-                </div>
-                <div class="project-content">
-                    <h3>Educa Web Platform</h3>
-                    <p>A modern, responsive e-learning platform built with vanilla web technologies. Features interactive course modules, progress tracking, user authentication, and a mobile-first design approach for optimal learning experiences across all devices.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive Design</span>
-                        <span class="tech-tag">Local Storage</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://vaibhav-singh05.github.io/Educa-Web/" target="_blank" class="project-link">
-                            <span class="link-icon">🌐</span>
-                            <span class="link-text">Live Demo</span>
-                        </a>
-                        <a href="https://github.com/vaibhav-singh05/Educa-Web" target="_blank" class="project-link">
-                            <span class="link-icon">🔗</span>
-                            <span class="link-text">View Code</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h3 class="footer-title">Vaibhav Singh</h3>
-                <p class="footer-description">Full Stack Developer passionate about creating amazing web experiences</p>
-                <div class="social-links">
-                    <a href="mailto:vaibhavsingh273010@gmail.com" class="social-link" title="Email">
-                        <span class="social-icon">📧</span>
-                    </a>
-                    <a href="https://linkedin.com/in/vaibhav-singh" class="social-link" title="LinkedIn">
-                        <span class="social-icon">💼</span>
-                    </a>
-                    <a href="https://github.com/vaibhav-singh" class="social-link" title="GitHub">
-                        <span class="social-icon">🐙</span>
-                    </a>
-                    <a href="https://drive.google.com/file/d/16hyTDBEUmi1VTxLqOFqsj6gQTVTFxdoM/view?usp=drive_link" class="social-link" title="Resume">
-                        <span class="social-icon">📄</span>
-                    </a>
+            <div class="footer-main">
+                <h3 class="footer-brand">Vaibhav Singh</h3>
+                <p class="footer-tagline">Backend Developer · Python · Django · AWS</p>
+                <div class="footer-social">
+                    <a href="mailto:vaibhavsingh273010@gmail.com" aria-label="Email">📧</a>
+                    <a href="https://www.linkedin.com/in/vaibhav-singh-2a5991229/" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
+                    <a href="https://github.com/vaibhav-singh05" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
+                    <a href="./My_Resume.pdf" download aria-label="Resume">📄</a>
                 </div>
             </div>
-            
-            <div class="footer-section">
+            <div class="footer-col">
                 <h4 class="footer-subtitle">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./index.html#about">About</a></li>
-                    <li><a href="./project.html">Projects</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
+                <div class="footer-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./index.html#experience">Experience</a>
+                    <a href="./index.html#expertise">Expertise</a>
+                    <a href="./project.html">Projects</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
             </div>
-            
-            <div class="footer-section">
+            <div class="footer-col">
                 <h4 class="footer-subtitle">Skills</h4>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Django</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">PostgreSQL</span>
+                <div class="footer-skills">
+                    <span class="footer-skill-tag">Python</span>
+                    <span class="footer-skill-tag">Django</span>
+                    <span class="footer-skill-tag">JavaScript</span>
+                    <span class="footer-skill-tag">HTML/CSS</span>
+                    <span class="footer-skill-tag">PostgreSQL</span>
+                    <span class="footer-skill-tag">AWS</span>
                 </div>
             </div>
         </div>
-        
         <div class="footer-bottom">
-            <div class="footer-copyright">
-                <p>&copy; 2024 Vaibhav Singh. All rights reserved.</p>
-                <p class="footer-message">Made with ❤️ and lots of ☕</p>
-            </div>
+            <p>&copy; 2025 Vaibhav Singh · Gorakhpur, Uttar Pradesh</p>
+            <p class="footer-heart">Made with ❤️ and lots of ☕</p>
         </div>
     </footer>
-    
-    <!-- Particles Container -->
+
     <div class="particles" id="particles"></div>
-    
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
     <script src="script.js"></script>
 </body>
 </html>
