@@ -26,7 +26,14 @@ function initTyped() {
     const el = document.getElementById('typed-element');
     if (!el || typeof Typed === 'undefined') return;
     new Typed('#typed-element', {
-        strings: ['Senior AI Software Engineer', 'AI Software Engineer', 'Python Developer', 'Django Expert', 'API Developer', 'Problem Solver'],
+        strings: [
+            'Senior AI Software Engineer',
+            'AI Software Engineer',
+            'Python Developer',
+            'Django REST Developer',
+            'API Builder',
+            'Problem Solver'
+        ],
         typeSpeed: 60,
         backSpeed: 40,
         backDelay: 2000,
