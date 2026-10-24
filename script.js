@@ -3,12 +3,37 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollProgress();
     initSmoothScrolling();
     initNavbarScroll();
+    initNavToggle();
     initTyped();
     initScrollReveal();
 });
 
+function initNavToggle() {
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    if (!toggle || !links) return;
+
+    const closeMenu = () => {
+        toggle.classList.remove('open');
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+    };
+
+    toggle.addEventListener('click', () => {
+        const open = toggle.classList.toggle('open');
+        links.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    links.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+}
+
 function initScrollReveal() {
-    const els = document.querySelectorAll('.section-title, .timeline-item, .expertise-card, .education-card, .skill-category, .achievement-card, .project-card, .contact-item, .projects-title, .contact-title');
+    const els = document.querySelectorAll('.section-title, .timeline-item, .expertise-card, .education-card, .skill-category, .achievement-card, .project-card, .featured-card, .contact-item, .projects-title, .contact-title');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(e => {
             if (e.isIntersecting) e.target.classList.add('revealed');
@@ -45,7 +70,7 @@ function initTyped() {
 function initParticles() {
     const container = document.getElementById('particles');
     if (!container) return;
-    const count = 50;
+    const count = 36;
     for (let i = 0; i < count; i++) {
         const p = document.createElement('div');
         p.className = 'particle';

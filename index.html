@@ -13,10 +13,10 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#050508" />
+    <meta name="theme-color" content="#070b16" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Vaibhav Singh | Senior AI Software Engineer</title>
 </head>
@@ -27,22 +27,31 @@
         <nav class="navbar">
             <a href="#home" class="nav-brand">VS</a>
             <div class="nav-right">
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
+                    <li><a href="#work">Work</a></li>
                     <li><a href="#expertise">Expertise</a></li>
                     <li><a href="./project.html">Projects</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="home" class="hero">
+            <div class="hero-watermark" aria-hidden="true">
+                BUILD<br>SHIP
+            </div>
             <div class="hero-content">
+                <div class="hero-chip">
+                    <span class="hero-chip-dot"></span>
+                    Open to collabs · Bengaluru remote
+                </div>
                 <h1 class="hero-title">
                     Hi, I'm <span class="gradient-text">Vaibhav Singh</span>
                 </h1>
@@ -69,27 +78,29 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-card">
-                    <div class="hero-card-glow"></div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-value">100+</span>
-                            <span class="stat-label">LeetCode Solved</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">2+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">B.Tech</span>
-                            <span class="stat-label">CSE · 7.8 CGPA</span>
+                <div class="hero-portrait-wrap">
+                    <div class="hero-portrait-glow"></div>
+                    <img src="./images/vaibhav.png" alt="Illustrated portrait of Vaibhav Singh" class="hero-portrait" width="760" height="760">
+                    <div class="hero-card">
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-value">100+</span>
+                                <span class="stat-label">LeetCode Solved</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">2+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">B.Tech</span>
+                                <span class="stat-label">CSE · 7.8 CGPA</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="section">
             <h2 class="section-title"><span class="section-num">01</span> Experience</h2>
             <div class="timeline">
@@ -141,11 +152,43 @@
             </div>
         </section>
 
-        <!-- Education Section -->
+        <section id="work" class="section featured-section">
+            <h2 class="section-title"><span class="section-num">02</span> Selected Work</h2>
+            <div class="featured-grid">
+                <a class="featured-card" href="https://medicalcounsellingcenter.com/" target="_blank" rel="noopener">
+                    <div class="featured-card-top">
+                        <span class="featured-mark">MC</span>
+                        <span class="live-badge">LIVE</span>
+                    </div>
+                    <h3>Medical Counselling Center</h3>
+                    <p>Production counselling platform — OTP auth, Razorpay webhooks, coupons, and an admin dashboard on Hostinger VPS.</p>
+                    <span class="featured-card-link">Visit live site →</span>
+                </a>
+                <a class="featured-card" href="https://unibook-krly.onrender.com" target="_blank" rel="noopener">
+                    <div class="featured-card-top">
+                        <span class="featured-mark">UB</span>
+                        <span class="live-badge">LIVE</span>
+                    </div>
+                    <h3>Unibook</h3>
+                    <p>Student book exchange with search, filters, and secure auth — built for campus textbook trading.</p>
+                    <span class="featured-card-link">Open Unibook →</span>
+                </a>
+                <a class="featured-card" href="https://vani-6hcu.onrender.com" target="_blank" rel="noopener">
+                    <div class="featured-card-top">
+                        <span class="featured-mark">VN</span>
+                        <span class="live-badge">LIVE</span>
+                    </div>
+                    <h3>Vani E-commerce</h3>
+                    <p>Full Django storefront with catalog, cart, orders, and payment integration.</p>
+                    <span class="featured-card-link">Open Vani →</span>
+                </a>
+            </div>
+        </section>
+
         <section id="education" class="section">
-            <h2 class="section-title"><span class="section-num">02</span> Education</h2>
+            <h2 class="section-title"><span class="section-num">03</span> Education</h2>
             <div class="education-card">
-                <div class="education-icon">🎓</div>
+                <div class="education-mark">IKG</div>
                 <div class="education-details">
                     <h3>B.Tech – Computer Science & Engineering</h3>
                     <p class="education-school">I.K. Gujral Punjab Technical University · Jalandhar, Punjab</p>
@@ -154,62 +197,59 @@
             </div>
         </section>
 
-        <!-- My Expertise Section -->
         <section id="expertise" class="section">
-            <h2 class="section-title"><span class="section-num">03</span> My Expertise</h2>
+            <h2 class="section-title"><span class="section-num">04</span> My Expertise</h2>
             <div class="expertise-grid">
                 <div class="expertise-card">
-                    <div class="expertise-icon">🌐</div>
+                    <div class="expertise-mark">API</div>
                     <div class="expertise-content">
-                        <h3>HTML (2021 – 2025)</h3>
-                        <p>Extensive experience in HTML for creating web pages. Proficient in structuring content, forms, embedding media, and building responsive, accessible websites.</p>
+                        <h3>Backend & APIs</h3>
+                        <p>Designing Django REST services, auth flows, and reliable integrations that stay maintainable as products grow.</p>
                     </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">🎨</div>
+                    <div class="expertise-mark">AI</div>
                     <div class="expertise-content">
-                        <h3>CSS (2021 – 2025)</h3>
-                        <p>Strong command of CSS for designing and styling web pages. Skilled in properties, selectors, media queries for layout, typography, color, and visual enhancements.</p>
+                        <h3>AI Product Engineering</h3>
+                        <p>Shipping AI-powered features at Spoto.in — wiring models into real APIs instead of leaving them as demos.</p>
                     </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">⚡</div>
+                    <div class="expertise-mark">PY</div>
                     <div class="expertise-content">
-                        <h3>JavaScript (2021 – 2025)</h3>
-                        <p>Significant experience in JavaScript for web development. Proficient in enhancing interactivity, DOM manipulation, event handling, and dynamic responsive applications.</p>
+                        <h3>Python Systems</h3>
+                        <p>Python for scalable backends, automation, and data work. Comfortable across Django, scripting, and service glue.</p>
                     </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">🐍</div>
+                    <div class="expertise-mark">PG</div>
                     <div class="expertise-content">
-                        <h3>Python (2023 – 2025)</h3>
-                        <p>Skilled in Python for scalable applications, data analysis, and automation. Experience with Django, Flask, NumPy, Pandas, and Matplotlib.</p>
+                        <h3>PostgreSQL</h3>
+                        <p>Relational modeling, indexing, and query work so payments, orders, and counselling data stay consistent.</p>
                     </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">🔧</div>
+                    <div class="expertise-mark">CLD</div>
                     <div class="expertise-content">
-                        <h3>Django (2024 – 2025)</h3>
-                        <p>Experienced in Django for robust web apps, RESTful APIs, ORM, secure authentication. Focus on scalable and maintainable code.</p>
+                        <h3>Cloud & Payments</h3>
+                        <p>AWS EC2/S3, Nginx, Gunicorn, plus Razorpay, Juspay, and Interakt in production checkout and messaging flows.</p>
                     </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">🗄️</div>
+                    <div class="expertise-mark">UI</div>
                     <div class="expertise-content">
-                        <h3>PostgreSQL (2024 – 2025)</h3>
-                        <p>Proficient in PostgreSQL for relational databases, complex SQL, performance optimization, data integrity, indexing, and query optimization.</p>
+                        <h3>Frontend Delivery</h3>
+                        <p>HTML, CSS, and JavaScript used to ship complete products — not just APIs — with clean, responsive interfaces.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Skills -->
         <section id="skills" class="section">
-            <h2 class="section-title"><span class="section-num">04</span> Technical Skills</h2>
+            <h2 class="section-title"><span class="section-num">05</span> Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="skill-category-header">
-                        <span class="skill-category-icon">💻</span>
                         <h4>Languages</h4>
                     </div>
                     <div class="skill-tags">
@@ -220,7 +260,6 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-category-header">
-                        <span class="skill-category-icon">🛠️</span>
                         <h4>Technologies & Databases</h4>
                     </div>
                     <div class="skill-tags">
@@ -233,7 +272,6 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-category-header">
-                        <span class="skill-category-icon">⚙️</span>
                         <h4>Frameworks & Libraries</h4>
                     </div>
                     <div class="skill-tags">
@@ -243,7 +281,6 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-category-header">
-                        <span class="skill-category-icon">☁️</span>
                         <h4>Tools & Platforms</h4>
                     </div>
                     <div class="skill-tags">
@@ -260,7 +297,6 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-category-header">
-                        <span class="skill-category-icon">📊</span>
                         <h4>Coding Profiles</h4>
                     </div>
                     <div class="skill-tags">
@@ -271,16 +307,15 @@
             </div>
         </section>
 
-        <!-- Achievements Section -->
         <section id="achievements" class="section">
-            <h2 class="section-title"><span class="section-num">05</span> Achievements</h2>
+            <h2 class="section-title"><span class="section-num">06</span> Achievements</h2>
             <div class="achievements-grid">
                 <div class="achievement-card">
-                    <span class="achievement-icon">🏆</span>
+                    <span class="live-badge">CERT</span>
                     <p>Certificate in Cascading Style Sheets from HackerRank</p>
                 </div>
                 <div class="achievement-card">
-                    <span class="achievement-icon">💻</span>
+                    <span class="live-badge">DSA</span>
                     <p>Solved 100+ problems on LeetCode — strong DSA foundation</p>
                 </div>
             </div>
@@ -293,10 +328,18 @@
                 <h3 class="footer-brand">Vaibhav Singh</h3>
                 <p class="footer-tagline">Senior AI Software Engineer · Spoto.in · Django REST · APIs</p>
                 <div class="footer-social">
-                    <a href="mailto:vaibhavsingh273010@gmail.com" aria-label="Email">📧</a>
-                    <a href="https://www.linkedin.com/in/vaibhav-singh-2a5991229/" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
-                    <a href="https://github.com/vaibhav-singh05" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
-                    <a href="./My_Resume.pdf" download aria-label="Resume">📄</a>
+                    <a href="mailto:vaibhavsingh273010@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vaibhav-singh-2a5991229/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 6.5A1.94 1.94 0 1 1 6.94 2.6a1.94 1.94 0 0 1 0 3.88zM4.75 8.7h4.38V21.4H4.75V8.7zm7.1 0h4.2v1.74h.06c.58-1.1 2-2.26 4.12-2.26 4.4 0 5.22 2.9 5.22 6.67v6.55h-4.38v-5.81c0-1.39-.03-3.17-1.93-3.17-1.94 0-2.24 1.51-2.24 3.07v5.91H11.85V8.7z"/></svg>
+                    </a>
+                    <a href="https://github.com/vaibhav-singh05" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.1c.85 0 1.7.12 2.5.34 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                    </a>
+                    <a href="./My_Resume.pdf" download aria-label="Resume">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-col">
@@ -304,7 +347,7 @@
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#experience">Experience</a>
-                    <a href="#expertise">Expertise</a>
+                    <a href="#work">Work</a>
                     <a href="./project.html">Projects</a>
                     <a href="./contact.html">Contact</a>
                 </div>
@@ -312,18 +355,18 @@
             <div class="footer-col">
                 <h4 class="footer-subtitle">Skills</h4>
                 <div class="footer-skills">
-                <span class="footer-skill-tag">Python</span>
-                <span class="footer-skill-tag">Django</span>
-                <span class="footer-skill-tag">JavaScript</span>
-                <span class="footer-skill-tag">HTML/CSS</span>
-                <span class="footer-skill-tag">PostgreSQL</span>
-                <span class="footer-skill-tag">AWS</span>
+                    <span class="footer-skill-tag">Python</span>
+                    <span class="footer-skill-tag">Django</span>
+                    <span class="footer-skill-tag">JavaScript</span>
+                    <span class="footer-skill-tag">HTML/CSS</span>
+                    <span class="footer-skill-tag">PostgreSQL</span>
+                    <span class="footer-skill-tag">AWS</span>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Vaibhav Singh · Gorakhpur, Uttar Pradesh</p>
-            <p class="footer-heart">Made with ❤️ and lots of ☕</p>
+            <p>&copy; 2026 Vaibhav Singh · Gorakhpur, Uttar Pradesh</p>
+            <p class="footer-heart">Built to ship.</p>
         </div>
     </footer>
 

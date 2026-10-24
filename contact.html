@@ -4,205 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contact Vaibhav Singh - Backend Developer. Email, phone, LinkedIn, GitHub." />
+    <meta name="description" content="Contact Vaibhav Singh - Senior AI Software Engineer. Email, phone, LinkedIn, GitHub." />
     <meta name="keywords" content="Contact, Backend Developer, Vaibhav Singh, Hire" />
     <meta name="author" content="Vaibhav Singh" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#050508" />
+    <meta name="theme-color" content="#070b16" />
     <link rel="stylesheet" href="style.css">
     <title>Contact | Vaibhav Singh</title>
-    <style>
-        .contact-section {
-            padding: 7rem 2rem 5rem;
-            min-height: 100vh;
-        }
-
-        .contact-section .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .contact-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .contact-title {
-            font-size: clamp(2.2rem, 5vw, 3rem);
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-            background: linear-gradient(135deg, var(--text), var(--cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .contact-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .contact-item {
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .contact-item:hover {
-            border-color: rgba(0, 212, 255, 0.5);
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
-        }
-
-        .contact-icon {
-            font-size: 2.25rem;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.2));
-        }
-
-        .contact-item h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--cyan);
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-item p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-link {
-            color: var(--cyan);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-        }
-
-        .contact-link:hover {
-            color: var(--purple);
-            text-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
-        }
-
-        .contact-form-container {
-            margin-top: 3.5rem;
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-form-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--cyan), var(--purple));
-        }
-
-        .form-title {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 1.75rem;
-            color: var(--text);
-        }
-
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 500;
-            color: var(--text);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem 1.25rem;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            color: var(--text);
-            font-size: 1rem;
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--cyan);
-            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15);
-        }
-
-        textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, var(--cyan), var(--blue));
-            color: #0a0a0a;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.35);
-        }
-
-        .submit-btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .submit-btn:hover::after {
-            left: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.45);
-        }
-
-        @media (max-width: 768px) {
-            .contact-section { padding: 5rem 1rem 3rem; }
-            .contact-title { font-size: 2rem; }
-        }
-    </style>
 </head>
 
 <body>
@@ -211,13 +19,16 @@
         <nav class="navbar">
             <a href="./index.html" class="nav-brand">VS</a>
             <div class="nav-right">
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./index.html#experience">Experience</a></li>
                     <li><a href="./index.html#expertise">Expertise</a></li>
                     <li><a href="./project.html">Projects</a></li>
                     <li><a href="./contact.html" class="active">Contact</a></li>
                 </ul>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </nav>
     </header>
@@ -232,36 +43,48 @@
 
                 <div class="contact-grid">
                     <div class="contact-item">
-                        <div class="contact-icon">📧</div>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+                        </div>
                         <h3>Email</h3>
                         <p>vaibhavsingh273010@gmail.com</p>
                         <a href="mailto:vaibhavsingh273010@gmail.com" class="contact-link">Send Email →</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📱</div>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3c0 1-1 2-2 2C9.5 19.5 4.5 14.5 4.5 5.5c0-1 1-2 2-2z"/></svg>
+                        </div>
                         <h3>Phone</h3>
                         <p>+91-9839388192</p>
                         <a href="tel:+919839388192" class="contact-link">Call →</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">💼</div>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 6.5A1.94 1.94 0 1 1 6.94 2.6a1.94 1.94 0 0 1 0 3.88zM4.75 8.7h4.38V21.4H4.75V8.7zm7.1 0h4.2v1.74h.06c.58-1.1 2-2.26 4.12-2.26 4.4 0 5.22 2.9 5.22 6.67v6.55h-4.38v-5.81c0-1.39-.03-3.17-1.93-3.17-1.94 0-2.24 1.51-2.24 3.07v5.91H11.85V8.7z"/></svg>
+                        </div>
                         <h3>LinkedIn</h3>
                         <p>Connect professionally</p>
                         <a href="https://www.linkedin.com/in/vaibhav-singh-2a5991229/" target="_blank" rel="noopener" class="contact-link">View Profile →</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">🐙</div>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.1c.85 0 1.7.12 2.5.34 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                        </div>
                         <h3>GitHub</h3>
                         <p>Explore my code</p>
                         <a href="https://github.com/vaibhav-singh05" target="_blank" rel="noopener" class="contact-link">View Repos →</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.8C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg>
+                        </div>
                         <h3>Location</h3>
                         <p>Gorakhpur, Uttar Pradesh</p>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📄</div>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg>
+                        </div>
                         <h3>Resume</h3>
                         <p>Download my CV</p>
                         <a href="./My_Resume.pdf" class="contact-link" download>Download PDF →</a>
@@ -296,10 +119,18 @@
                 <h3 class="footer-brand">Vaibhav Singh</h3>
                 <p class="footer-tagline">Senior AI Software Engineer · Spoto.in · Django REST · APIs</p>
                 <div class="footer-social">
-                    <a href="mailto:vaibhavsingh273010@gmail.com" aria-label="Email">📧</a>
-                    <a href="https://www.linkedin.com/in/vaibhav-singh-2a5991229/" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
-                    <a href="https://github.com/vaibhav-singh05" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
-                    <a href="./My_Resume.pdf" download aria-label="Resume">📄</a>
+                    <a href="mailto:vaibhavsingh273010@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vaibhav-singh-2a5991229/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 6.5A1.94 1.94 0 1 1 6.94 2.6a1.94 1.94 0 0 1 0 3.88zM4.75 8.7h4.38V21.4H4.75V8.7zm7.1 0h4.2v1.74h.06c.58-1.1 2-2.26 4.12-2.26 4.4 0 5.22 2.9 5.22 6.67v6.55h-4.38v-5.81c0-1.39-.03-3.17-1.93-3.17-1.94 0-2.24 1.51-2.24 3.07v5.91H11.85V8.7z"/></svg>
+                    </a>
+                    <a href="https://github.com/vaibhav-singh05" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.1c.85 0 1.7.12 2.5.34 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                    </a>
+                    <a href="./My_Resume.pdf" download aria-label="Resume">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-col">
@@ -325,8 +156,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Vaibhav Singh · Gorakhpur, Uttar Pradesh</p>
-            <p class="footer-heart">Made with ❤️ and lots of ☕</p>
+            <p>&copy; 2026 Vaibhav Singh · Gorakhpur, Uttar Pradesh</p>
+            <p class="footer-heart">Built to ship.</p>
         </div>
     </footer>
 
